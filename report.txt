@@ -1,0 +1,21 @@
+n=30  r^2 <= 8.03172  min pairs= 66  max pairs=21  loose points=0  core active= 87 / needed  85  ok
+n=31  r^2 <= 8.20049  min pairs= 68  max pairs=20  loose points=0  core active= 88 / needed  88  ok
+n=32  r^2 <= 8.48158  min pairs= 72  max pairs=21  loose points=0  core active= 93 / needed  91  ok
+n=33  r^2 <= 8.76741  min pairs= 61  max pairs=23  loose points=4  core active= 82 / needed  82  ok
+n=34  r^2 <= 8.96990  min pairs= 73  max pairs=24  loose points=0  core active= 97 / needed  97  ok
+n=35  r^2 <= 9.19359  min pairs= 77  max pairs=22  loose points=1  core active= 97 / needed  97  ok
+n=36  r^2 <= 9.43180  min pairs= 83  max pairs=20  loose points=0  core active=103 / needed 103  ok
+n=37  r^2 <= 9.68132  min pairs= 78  max pairs=23  loose points=2  core active=100 / needed 100  ok
+n=38  r^2 <= 9.83038  min pairs= 86  max pairs=23  loose points=0  core active=109 / needed 109  ok
+n=39  r^2 <= 10.09466  min pairs= 87  max pairs=25  loose points=0  core active=112 / needed 112  ok
+n=40  r^2 <= 10.30844  min pairs= 91  max pairs=24  loose points=0  core active=115 / needed 115  ok
+n=41  r^2 <= 10.52897  min pairs= 90  max pairs=27  loose points=1  core active=115 / needed 115  ok
+n=42  r^2 <= 10.69509  min pairs= 87  max pairs=24  loose points=6  core active=103 / needed 103  ok
+n=43  r^2 <= 10.90193  min pairs= 99  max pairs=24  loose points=1  core active=121 / needed 121  ok
+n=44  r^2 <= 11.07871  min pairs= 95  max pairs=28  loose points=2  core active=121 / needed 121  ok
+n=45  r^2 <= 11.24595  min pairs= 96  max pairs=34  loose points=0  core active=130 / needed 130  ok
+n=46  r^2 <= 11.45054  min pairs= 98  max pairs=30  loose points=2  core active=127 / needed 127  ok
+n=47  r^2 <= 11.71449  min pairs=105  max pairs=31  loose points=0  core active=136 / needed 136  ok
+n=48  r^2 <= 11.86624  min pairs=110  max pairs=29  loose points=0  core active=139 / needed 139  ok
+n=49  r^2 <= 12.02541  min pairs=114  max pairs=30  loose points=0  core active=144 / needed 142  ok
+n=50  r^2 <= 12.25012  min pairs=118  max pairs=27  loose points=0  core active=145 / needed 145  ok
