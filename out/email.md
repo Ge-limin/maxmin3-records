@@ -30,7 +30,7 @@ In n=37 (point 12 in coords_n37.txt); n=42 (point 30 in coords_n42.txt); n=44 (p
 
 Method: the configurations were found by numerical optimization written and run with the help of Claude (Anthropic's AI model): many random starts of a constrained local optimizer (SLSQP; minimize t subject to 1 <= |xi-xj|^2 <= t), then basin hopping that also seeds each n from the best n-1 and n+1 configurations. As a sanity check, the same code reproduces your current values for n=12, 13 and 30. Each value was checked exactly: the coordinates were rounded to a 10^-12 grid and the ratio of max to min squared distance computed as an exact fraction. The coordinates are attached (coords_nN.txt, one point per line, with the exact ratio in the header).
 
-Please credit {{FULL NAME}}.
+Please credit Limin Ge.
 
 Best regards,
-{{FULL NAME}}
+Limin Ge
