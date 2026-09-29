@@ -11,7 +11,7 @@ import sys
 import numpy as np
 from PIL import Image, ImageDraw
 
-SIZE = 250          # the reference pictures are 215-279 px
+SIZE = 250          # longest side; the reference pictures are 215-279 px
 SS = 4              # supersampling factor
 CYAN = np.array([0, 230, 230])
 RED = np.array([235, 10, 0])
@@ -82,7 +82,12 @@ def render(X, path):
             x, y = P[it]
             r = 2.6 * SS
             g.ellipse([x - r, y - r, x + r, y + r], fill=shade(BALL, depth))
-    img = img.resize((SIZE, SIZE), Image.LANCZOS)
+    # crop tight like the page's pictures (drawing touches all four edges)
+    bbox = Image.eval(img.convert("L"), lambda v: 255 if v < 250 else 0).getbbox()
+    img = img.crop(bbox)
+    w, h = img.size
+    f = SIZE / max(w, h)
+    img = img.resize((max(1, round(w * f)), max(1, round(h * f))), Image.LANCZOS)
     img.convert("P", palette=Image.ADAPTIVE, colors=64).save(path)
     return sum(1 for e in edges if e[2] is CYAN), sum(1 for e in edges if e[2] is RED)
 

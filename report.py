@@ -54,6 +54,6 @@ if __name__ == "__main__":
             if not ok and n >= 31:
                 print(n)
             continue
-        print(f"n={n:2d}  r^2 <= {claim(r)}  min pairs={nmin:3d}  max pairs={nmax:2d}  "
+        print(f"n={n:2d}  r^2 = {claim(r)}  min pairs={nmin:3d}  max pairs={nmax:2d}  "
               f"loose points={n - k}  core active={core_active:3d} / needed {need:3d}  "
               f"{'ok' if ok else 'LOOSE'}")

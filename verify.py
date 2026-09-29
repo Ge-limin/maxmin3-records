@@ -2,13 +2,14 @@
 
 Coordinates are rounded to integers on a 1e-12 grid, so every squared
 distance is an exact integer and r^2 = max/min is an exact fraction.
-The value we claim is that fraction rounded UP at the 5th decimal, and the
+The value we claim is that fraction truncated at the 5th decimal, written
+with the page's "+" ("the true value is a little more than this"), and the
 coordinates we publish are exactly these grid points.
 
     python verify.py bests/n31.npy [bests/n32.npy ...]
 """
 import sys
-from decimal import Decimal, ROUND_CEILING
+from decimal import Decimal, ROUND_FLOOR
 from fractions import Fraction
 from itertools import combinations
 
@@ -27,8 +28,10 @@ def exact_ratio2(P):
 
 
 def claim(r):
-    return (Decimal(r.numerator) / Decimal(r.denominator)).quantize(
-        Decimal("0.00001"), rounding=ROUND_CEILING)
+    """Page convention: truncate at 5 decimals and append '+'."""
+    v = (Decimal(r.numerator) / Decimal(r.denominator)).quantize(
+        Decimal("0.00001"), rounding=ROUND_FLOOR)
+    return f"{v}+"
 
 
 if __name__ == "__main__":
@@ -37,4 +40,4 @@ if __name__ == "__main__":
         X = np.load(path)
         assert X.ndim == 2 and X.shape[1] == 3
         r = exact_ratio2(grid_points(X.tolist()))
-        print(f"{path}: n={len(X)} exact r^2 = {float(r):.12f}  claim r^2 <= {claim(r)}")
+        print(f"{path}: n={len(X)} exact r^2 = {float(r):.12f}  claim r^2 = {claim(r)}")
