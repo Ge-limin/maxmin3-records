@@ -20,7 +20,7 @@ python3 -m venv .venv && .venv/bin/pip install numpy scipy pillow
 | `common.py` | Objective, SLSQP polisher, and the `bests/` store (a file is replaced only by a strictly better configuration) |
 | `search.py` | Random multistart |
 | `improve.py` | Basin hopping from the current best, plus seeds from the best n−1 and n+1 sets |
-| `verify.py` | Exact check: coordinates rounded to a 10⁻¹² grid, r² as an exact fraction, claim rounded up at 5 decimals |
+| `verify.py` | Exact check: coordinates rounded to a 10⁻¹² grid, r² as an exact fraction, claim truncated at 5 decimals with the page's "+" |
 | `report.py` | Value and contact counts per n; after stripping loose points, `active ≥ 3k−5` on the rigid core is a necessary sign of a local optimum (`report.txt` holds the current output) |
 | `stress.py` | Tries to beat each n from its neighbours (delete a point from n+1, add one to n−1, re-optimise) |
 | `symmetry.py` | Highest-order rotation axis of a configuration, for the page's symmetry note |
