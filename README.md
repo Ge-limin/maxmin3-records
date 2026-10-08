@@ -21,7 +21,9 @@ python3 -m venv .venv && .venv/bin/pip install numpy scipy pillow
 | `search.py` | Random multistart |
 | `improve.py` | Basin hopping from the current best, plus seeds from the best n−1 and n+1 sets |
 | `verify.py` | Exact check: coordinates rounded to a 10⁻¹² grid, r² as an exact fraction, claim rounded up at 5 decimals |
-| `report.py` | Value and contact counts per n; `active ≥ 3n−5` is a necessary sign of a local optimum |
+| `report.py` | Value and contact counts per n; after stripping loose points, `active ≥ 3k−5` on the rigid core is a necessary sign of a local optimum (`report.txt` holds the current output) |
+| `stress.py` | Tries to beat each n from its neighbours (delete a point from n+1, add one to n−1, re-optimise) |
+| `symmetry.py` | Highest-order rotation axis of a configuration, for the page's symmetry note |
 | `render.py` | Picture in the style of the existing page (min distances cyan, max distances red) |
 | `make_submission.py` | `out/mmN.gif`, `out/coords_nN.txt` and `out/email.md` |
 
@@ -31,4 +33,8 @@ The same code reproduces the page's current values for n = 12 (icosahedron, 3.61
 
 ## Submission
 
-Nothing has been submitted. `out/email.md` needs the submitter's full name and is sent from their own address.
+Submitted to Erich Friedman on 2026-09-29, credited to Limin Ge (`out/email.md`, attachments in `out/maxmin3.zip`). Awaiting inclusion on the page.
+
+## Article
+
+How this came about, and what it says about doing "research" with AI: article link to be added.
