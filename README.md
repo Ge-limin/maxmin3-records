@@ -37,4 +37,4 @@ Submitted to Erich Friedman on 2026-09-29, credited to Limin Ge (`out/email.md`,
 
 ## Article
 
-How this came about, and what it says about doing "research" with AI: article link to be added.
+How this came about, and what it says about doing "research" with AI: [OpenAI Published a Batch of Math Results, and So Did I](https://liminge.space/blog/openai-math-results-so-did-i) ([中文](https://liminge.space/cn/blog/openai-math-results-so-did-i)).
